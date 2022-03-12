@@ -85,5 +85,5 @@ function slider() {
     
 
 }
-setInterval(slider,1000);
+setInterval(slider,3000);
 // end landing
