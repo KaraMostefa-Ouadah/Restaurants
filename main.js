@@ -8,7 +8,7 @@ let ul = document.querySelector("ul");
 let side = document.querySelector(".side");
 let menu = document.querySelectorAll(".menu span")[0];
 let inp = document.querySelector(".search input");
-let act = document.querySelectorAll(".nrml li");
+let act = document.querySelectorAll(".nrml li:not(:last-child)");
 let actsid = document.querySelectorAll(".bt li");
 
 
@@ -53,9 +53,8 @@ actsid.forEach(el => {
 // end header 
 // start landing
 let active = document.querySelectorAll(".landing .bullet li");
-	
-	
-    let topp = ["background-image: url(../images/1-La-Palette.jpg);","background-image: url(../images/1-le\ cirque.jpg);","background-image: url(../images/1-OB_AQUA_750x400_01\ 3.jpg);","background-image: url(../images/1-Villa\ Mikuna.jpg);","background-image: url(../images/1-OB_LIFE_750x400_01\ copie.jpg);"];
+let pics = document.querySelector(".landing .pics");
+let clicked = false;
 
 let i = 1;
 active.forEach(el => {
@@ -64,7 +63,16 @@ active.forEach(el => {
             el.classList.remove("active");
         });
         e.currentTarget.classList.add("active");
-        i = active.indexOf(el);
+        i = parseInt(el.getAttribute("id"))-1;
+        pics.style.marginLeft = "-"+(i)+"00%";
+
+        clearInterval(interval);
+        setTimeout(function(){
+            setInterval(slider,5000);
+            console.log("waited")
+        },5000);
+        clicked = true;        
+        i++;
     });
     
 });
@@ -73,17 +81,78 @@ function slider() {
     active.forEach(el => {
         el.classList.remove("active");
     });
-    if(i < 5) {
-        document.querySelector(".landing .container").style.cssText = '"'+topp[i]+'"';
+    
+    if(i <= 4 ) {
+        pics.style.marginLeft = "-"+(i)+"00%";
         active[i].classList.add("active");
         i++;
     }else {
-        i = 1;
+        pics.style.marginLeft = "0%";        
         active[0].classList.add("active");
-        document.querySelector(".landing .container").style.backgroundImage = '"'+topp[0]+'"';
+        i = 1;
     }
-    
+
 
 }
-setInterval(slider,3000);
+let interval = setInterval(slider,5000);
 // end landing
+
+// start top 
+let resnext = document.querySelector(".next.res");
+let resprevious = document.querySelector(".previous.res");
+let vilnext = document.querySelector(".next.vil");
+let vilprevious = document.querySelector(".previous.vil");
+let reslist = document.querySelector(".resList");
+let villist = document.querySelector(".vilList");
+
+
+let j = 0;
+
+resnext.onclick = function() {
+        
+        if(j >= 0) {
+            resprevious.style.display = "flex";
+        }
+        if(j < 4){        
+            j++;   
+        reslist.style.marginLeft = "-" + (j*50) + "%";         
+    }
+}
+resprevious.onclick = function() {
+
+    if(j >= 1){
+        j--;
+        reslist.style.marginLeft = "-" +((j)*50) + "%";
+}    
+    if(j < 1) {
+        resprevious.style.display = "none";
+
+
+    }
+}
+let k = 0;
+
+vilnext.onclick = function() {    
+   
+    if(k >= 0) {
+        vilprevious.style.display = "flex"
+    }
+    if(k < 4){
+        k++;
+        villist.style.marginLeft = "-" + (k*50) + "%";
+}
+}
+vilprevious.onclick = function() {
+
+    if(k >= 1){
+        k--;
+        villist.style.marginLeft = "-" +((k)*50) + "%";
+}    
+    if(k < 1) {
+        vilprevious.style.display = "none";
+
+
+    }
+}
+
+// end top 
