@@ -572,7 +572,8 @@ header .login:hover {
 /* Start TOP Restaurants */
 .content {
 	display: flex;
-	justify-content: space-between;
+    justify-content: space-between;
+    align-items: center;
 	margin: 20px 0;
 }
 .content .title {
@@ -590,7 +591,7 @@ header .login:hover {
 	color: var(--main-color);
 }
 .topRes .container {
-        position: relative;
+    position: relative;
 }
 .topRes .container .fakeContainer{
     width: 100%;
@@ -630,22 +631,7 @@ header .login:hover {
     left: -1%;  
     display: none;
 }
-@media (max-width: 767px) {
-    .next {
-        display: none;
-    }
-    .previous {
-        display: none !important;
-    }
-}
-@media (max-width: 991px) {
-    .next {
-        right: 0%; 
-    }
-    .previous {
-        display: none;
-    }
-}
+
 .topRes .container .resList {
     width: 500%;    
     display: flex;
@@ -681,6 +667,31 @@ header .login:hover {
 .topRes .container .resList .box .avis .evaluation {
     margin-right: 10px;
 }
+@media (max-width: 767px) {
+    .topRes .container .fakeContainer {
+        overflow-x: auto;
+    }
+    .topRes .container .fakeContainer::-webkit-scrollbar {
+        width: 0;
+    }
+    .next {
+        display: none;
+    }
+    .previous {
+        display: none !important;
+    }
+    .topRes .container .resList .box .avis .evaluation {
+        width: 180px;
+    }
+}
+@media (max-width: 991px) {
+    .next {
+        right: 0%; 
+    }
+    .previous {
+        display: none;
+    }
+}
 /* End TOP Restaurants */
 /* Start TOP Villes*/
 
@@ -708,7 +719,7 @@ overflow: hidden;
 }
 .topVil .container .vilList img {
 	border-radius: 20px;
-	max-width: 100%;
+
 }
 .topVil .container .vilList .box {
 	position: relative;
@@ -724,5 +735,16 @@ overflow: hidden;
     box-shadow: 0 2px 4px rgb(45 51 63 / 20%);
 	transform: translateY(-10px);
 	transition: .3s;
+}
+@media (max-width: 767px) {
+    .topVil .container .fakeContainer {
+        overflow-x: auto;
+    }
+    .topVil .container .fakeContainer::-webkit-scrollbar {
+        width: 0;
+    }
+    .topVil .container .vilList img {
+        width: 230px;
+    }
 }
 /* End TOP Villes */
