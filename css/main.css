@@ -592,12 +592,11 @@ header .login:hover {
 }
 .topRes .container {
     position: relative;
+    padding-top: 50px;
 }
 .topRes .container .fakeContainer{
     width: 100%;
     height: 100%;
-
-	padding-top: 50px;
 	color: #777;
     overflow: hidden;
 }
@@ -697,12 +696,11 @@ header .login:hover {
 
 .topVil .container {
     position: relative;
+    padding-top: 50px;
 }
 .topVil .container .fakeContainer{
 width: 100%;
 height: 100%;
-
-padding-top: 50px;
 color: #777;
 overflow: hidden;
 }
