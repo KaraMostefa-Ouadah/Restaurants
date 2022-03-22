@@ -15,7 +15,6 @@ html {
 body {
 	font-family: 'Work Sans', sans-serif;
     margin: 0;
-    height: 500px;
     background-color: #f6f6f64a;
 }
 .container {
@@ -23,7 +22,7 @@ body {
 	margin-right: auto;
 	padding-left: 15px;
     padding-right: 15px;
-    background-color: white;
+
 }
 /* small  */
 @media (min-width: 768px) {
@@ -46,8 +45,10 @@ body {
 /* globale values  */
 /* start header  */
 header {
-    position: relative;
+    position: sticky;
+    top: 0px;
     background-color: white;
+    z-index: 30;
 }
 header .container {
     display: flex;
@@ -276,7 +277,7 @@ header .login:hover {
     top: 0;
     display: none;
     justify-content: center;
-    z-index: 5;
+    z-index: 31;
 }
 .search .sr {
     display: none;
@@ -413,6 +414,7 @@ header .login:hover {
     height: 80vh;
     padding: 0;
     overflow: hidden;
+    background-color: white;
 }
 .landing .container .pics {
     width: 500%;    
@@ -593,6 +595,7 @@ header .login:hover {
 .topRes .container {
     position: relative;
     padding-top: 50px;
+    background-color: white;
 }
 .topRes .container .fakeContainer{
     width: 100%;
@@ -637,7 +640,7 @@ header .login:hover {
     flex-direction: row;
     flex-wrap: nowrap;
     transition-duration: 1s;
-    margin-bottom: 20px;
+    margin-bottom: 40px;
 }
 .topRes .container .resList img {
 	border-radius: 20px;
@@ -706,7 +709,8 @@ overflow: hidden;
 }
 .topVil .container hr {
 	border: 1px solid #d4d4d4;
-	border-bottom: none;
+    border-bottom: none;
+    background-color: white;
 }
 .topVil .container .vilList {
     width: 500%;    
@@ -714,6 +718,7 @@ overflow: hidden;
     flex-direction: row;
     flex-wrap: nowrap;
     transition-duration: 1s;
+    margin-bottom: 40px;
 }
 .topVil .container .vilList img {
 	border-radius: 20px;
@@ -746,3 +751,102 @@ overflow: hidden;
     }
 }
 /* End TOP Villes */
+
+/* Start restaurateur */
+.restaurateur {
+    margin-top: 40px;
+
+    background-color: #f1f1f1;
+    /* color: white; */
+    padding: 100px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.restaurateur h1 {
+    width: 100%;
+    text-align: center;
+}
+.restaurateur p {
+    width: 100%;
+    text-align: center;
+    font-size: 18px;
+}
+.restaurateur button {
+    margin-top: 50px;
+    background-color: white;
+    border: 1px solid black;
+    border-radius: 0.25rem;
+    padding: 0;
+    height: 60px;
+    width: 220px;
+    font-size: 16px;
+    background-color: var(--main-color);
+    color: white;
+}
+.restaurateur button:hover{
+    background-color: #b52631;
+    transition-duration: .3s;
+}
+@media (max-width: 767px) {
+    .restaurateur {
+        padding: 100px 25px;
+    }
+    .restaurateur .container {
+        text-align: center;
+    }
+}
+/* End restaurateur */
+ /* start footer   */
+footer{
+    background-color: #242540;    
+    width: 100%;
+    padding: 50px 0;
+    color: white;
+}
+footer span {
+    display: block;
+    width: 100%;
+    text-align: center;
+    padding-top: 20px;
+    font-size: 14px;
+}
+footer .container {
+    display: grid;
+    grid-template-columns: repeat(3,auto);
+}
+footer h4 {
+    padding-left: 50px;
+}
+footer ul {
+    list-style: none;
+}
+footer li {
+    margin-bottom: 10px;
+}
+footer a:hover {
+    color: var(--main-color);
+}
+footer a {
+    text-decoration:none ;
+    color:white;
+}
+@media (max-width: 767px) {
+    footer {
+        text-align: center;
+        padding: 0;
+    }
+    footer .container {
+        display: grid;
+        grid-template-columns: repeat(3,auto-fill);
+        padding: 0;
+    }
+    footer ul,
+    footer h4 {
+        padding: 0;
+    }
+    footer li {
+        text-align: center;
+    }
+}
+ /* End footer   */
