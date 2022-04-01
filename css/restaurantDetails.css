@@ -1,0 +1,44 @@
+:root {
+    --main-color: #da3743;
+}
+.resLanding {
+    background-image: url("../images/top-view-fast-food-mix-hamburger-doner-sandwich-chicken-nuggets-rice-vegetable-salad-chicken-sticks-caesar-salad-mushrooms-pizza-chicken-ragout-french-fries-mayo.jpg");
+    background-size: cover;
+    width: 100%;
+    height: 460px;
+}
+.details .container {
+    display: flex;
+    justify-content: center;
+}
+.details .container .detContent {
+    width: 80%;
+    margin-top: -50px;
+    background-color: white;
+}
+.details .container .detContent .heading ul {
+    display: flex;
+    list-style: none;
+    z-index: 2;
+    align-items: center;
+    margin: 0;
+    height: 60px;
+}
+.details .container .detContent .heading li {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    padding-right: 13px;
+	padding-left: 13px;
+    justify-content: center;
+}
+.details .container .detContent .heading li a {
+    text-decoration: none;
+    color: black;
+}
+li.active {
+    border-bottom: 1px solid var(--main-color);
+}
+li.active a {
+    color: var(--main-color) !important;
+}
