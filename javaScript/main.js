@@ -211,6 +211,6 @@ function initMap() {
     // Initialize and add the map
     // restaurateur 
         document.querySelector(".restaurateur button").onclick = function() {
-            window.location.href = ("../html/Inscription.html")
+            window.location.href = ("html/Inscription.html")
         }
     // restaurateur 
