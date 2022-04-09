@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Name</title>
+    <link rel="stylesheet" href="../css/normalize.css">
+    <!-- font awesome library -->
+    <link rel="stylesheet" href="../css/all.min.css">
+    <!-- main css file  -->
+    <link rel="stylesheet" href="../css/main.css">
+    <link rel="stylesheet" href="../css/restaurantDetails.css">
+    <!-- google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@200;300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+<body>
+    <!-- start header  -->
+    <header>
+            <div class="container">
+                    <div class="logo">Logo
+                        <form class="recherche">
+                        <img src="../images/search_black_24dp.svg" alt="">
+                        </form>
+                    </div>           
+                    <form class="recherche" id="re" style="display: none;">
+                    <img src="../images/search_black_24dp.svg" alt="">
+                    </form>
+                <div class="menu">
+                        <span class="material-icons">
+                            menu
+                        </span>
+                    <ul class="nrml">
+                        <li><a href="../index.html">Accueil</a></li>
+                        <li><a href="TopRestaurants.html">Top Restaurants</a></li>
+                        <li><a href="topDestination.html">Top Destinations</a></li>
+                        <li><a href="Nouveau.html">Nouveau</a></li>
+                        <li><a href="map.html">Map</a></li>
+                        <li><button class="login">Se Connecter</button></li>
+                    </ul>
+                    
+                </div>
+                
+            </div>
+            <div class="side">
+                <div>
+                <button class="close">
+                    <img src="../images/close_black_24dp.svg" alt="close">
+                </div>
+                <div class="bt">
+                <button class="login">Se Connecter</button>
+                </div>
+                <ul class="bt">
+                        <li><a href="../index.html">Accueil</a></li>
+                        <li><a href="TopRestaurants.html">Top Restaurants</a></li>
+                        <li><a href="topDestination.html">Top Destinations</a></li>
+                        <li><a href="Nouveau.html">Nouveau</a></li>
+                        <li><a href="map.html">Map</a></li>
+                </ul>
+            </div>
+            
+        </header>
+        <div class="overlay"></div>
+        <div class="account">
+            <div class="container acc">
+                <form class="n1">
+                    <button type="button" class="close">
+                    <img src="../images/close_white_24dp.svg" alt="">
+                    </button>
+                    <button class="closeMini" style="display:none ;">
+                            <img src="../images/close_black_24dp.svg" alt="close">
+                    </button>
+                    <h1>Rejoignez-nous !</h1>
+                    <div class="colLeft">
+                        <label for="nom">Nom</label>
+                        <div class="inp">
+                        <input id="nom" type="text" placeholder="Nom">
+                        </div>
+                    </div>
+                    <div class="colRight">
+                        <label for="preom">Preom</label>
+                        <div class="inp">
+                        <input id="preom" type="text" placeholder="Preom">
+                        </div>
+                    </div>
+                    <label for="email">Adresse e-mail</label>
+                    <div class="inp">
+                        <input  type="email" placeholder="Email">
+                    </div>
+                    <label for="mdp">Mot de passe</label>
+                    <div class="inp">
+                        <input  type="password" placeholder="Mot de passe">
+                    </div>
+                    <button class="action">S'inscrire</button>
+                    <span class="quest">Vous avez déjà un compte</span>
+                    <button class="cnct"> <span class="bold">Connectez-vous</span> en utilisant votre compte ______.</button>
+                </form>
+                <form class="n2" style="display: none;">
+                        <button type="button" class="close">
+                        <img src="../images/close_white_24dp.svg" alt="">
+                        </button>
+                        <button class="closeMini" style="display:none ;">
+                                <img src="../images/close_black_24dp.svg" alt="close">
+                        </button>
+                        <h1>Bienvenue !</h1>
+                        <label for="email">Adresse e-mail</label>
+                        <div class="inp">
+                            <input  type="email" placeholder="Email">
+                        </div>
+                        <label for="mdp">Mot de passe</label>
+                        <div class="inp">
+                            <input  type="password" placeholder="Mot de passe">
+                        </div>
+                        <button class="action">Se Connecter</button>
+                        <span class="quest">Vous n'avez pas un compte?</span>
+                        <button class="cnct"> <span class="bold">Inscrivez-vous</span> pour découvrir le meilleur de ______.</button>
+                    </form>
+            </div>
+        </div>
+        <div class="search">
+            <div class="sr">
+                    <button type="button" class="close">
+                            <img src="../images/close_white_24dp.svg" alt="">
+                    </button>
+                <form>
+                    <img src="../images/search_black_24dp.svg" alt="">
+                    <input type="text">
+                </form>
+            </div>
+        </div>
+        <!-- end header  -->
+
+        <!-- start landing  -->
+        <div class="resLanding">
+        </div>
+        <div class="details">
+            <div class="container">
+                <div class="detContent">
+                    <div class="heading">
+                        <ul>
+                            <li class="active"><a href="#Aperçu">Aperçu</a></li>
+                            <li><a href="#Photos">Photos</a></li>
+                            <li><a href="#comment">Commentaires</a></li>
+                        </ul>
+                    </div>
+                    <h1 id="Aperçu">Name</h1>
+                    <hr style="margin-bottom: 20px;">
+                    <div class="avis">
+                        <div class="evaluation" style="display: inline; margin-right: 10px;">
+                            <img src="../images/star_border_black_24dp.svg" alt="">
+                            <img src="../images/star_border_black_24dp.svg" alt="">
+                            <img src="../images/star_border_black_24dp.svg" alt="">
+                            <img src="../images/star_border_black_24dp.svg" alt="">
+                            <img src="../images/star_border_black_24dp.svg" alt="">
+                        </div>
+                        <span class="moyenne">0.0</span>
+                        <span class="Commentaires"><img src="../images/mode_comment_black_24dp.svg" alt=""> 0.0</span>
+                        <span class="price"><img src="../images/monetization_on_black_24dp.svg" alt=""> 0.0</span>
+
+                    </div>
+                    <div class="topTags">
+                        <h4>Top Tags : </h4>
+                        <div>menu</div>
+                        <div>menu</div>
+                        <div>menu</div>
+                    </div>
+                    <div class="detail">
+                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. 
+                            Ducimus ullam magni eos odit velit, ipsa distinctio qui quo,
+                            nesciunt dolorem dolore aperiam recusandae. Saepe minima autem nulla unde iste maxime?</p>
+                    </div>
+                    
+                    <div class="userEval">
+                        <h2>Évaluer le Restaurant : </h2><hr>
+                        <h5>dites aux autres ce que vous pensez !</h5>
+                        <div class="bigeval">
+                            <div  class="image" style="background-image: url('../images/star_border_black_24dp.svg');background-size: contain;"></div>
+                            <div class="image" style="background-image: url('../images/star_border_black_24dp.svg');background-size: contain;"></div>
+                            <div  class="image" style="background-image: url('../images/star_border_black_24dp.svg');background-size: contain;"></div>
+                            <div  class="image" style="background-image: url('../images/star_border_black_24dp.svg');background-size: contain;"></div>
+                            <div  class="image" style="background-image: url('../images/star_border_black_24dp.svg');background-size: contain;"></div>
+                        </div>
+                        <button class="comenter">Écrire un commentaire</button>
+                    </div>
+                    <div class="over">
+                        <div class="ecrirComnt">
+                            <div class="personel">
+                                <img src="" alt="" width="50px" height="50px" style="border-radius: 50%; border: .5px solid black;">
+                                <p class="nom">name</p>
+                                <p style="color: #aaa;">Les avis sont publics et incluent le nom de votre compte.</p>
+                            </div>
+                            <div class="div">
+                                
+                            </div>
+                            <textarea  rows="10" placeholder="Décrivez votre expérience (facultatif)" style="width: 100%;" autofocus="true"></textarea>
+                            <div class="buttons">
+                                <button>Envoyer</button>
+                                <button class="annuler">Annuler</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="Photos">
+                        <h3>n_Photos</h3>
+                        <hr style="margin-bottom: 15px;">
+                        <div class="respics">
+                            <!-- <button><img src="../images/1.jpg" alt=""></button> -->
+                        </div>
+                    </div>
+                    <div class="menu">
+                        <h3>Menu</h3>
+                        <hr style="margin-bottom: 15px;">
+                        <p><img src="../images/launch_black_24dp.svg" alt="" style="margin-right: 10px;"> <a href="">Voir le menu sur le site du restaurant</a></p>
+                    </div>
+                    <div id="comment">
+                        <h3>Ce que les gens disent</h3>
+                        <hr style="margin-bottom: 20px;">
+                        <div class="cmnt">
+                            <div class="person">
+                                <img src="" alt="" width="50px" height="50px" style="border-radius: 50%; border: .5px solid black;">
+                                <p class="nom">name</p>
+                                <p class="wilaya">wilaya</p>
+                                <div class="eval">
+                                    <img src="../images/mode_comment_black_24dp.svg" alt="" width="20px" height= "20px">
+                                    <span class="number">n</span> Avis
+                                </div>
+                            </div>
+                            <div class="comntContent">
+                                    <div class="midl">
+                                            <div class="evaluation" style="display: inline;">
+                                                    <img src="../images/star_border_black_24dp.svg" alt="">
+                                                    <img src="../images/star_border_black_24dp.svg" alt="">
+                                                    <img src="../images/star_border_black_24dp.svg" alt="">
+                                                    <img src="../images/star_border_black_24dp.svg" alt="">
+                                                    <img src="../images/star_border_black_24dp.svg" alt="">
+                                            </div> 
+                                                <p class="date">publié il y a N jours</p>
+                                    </div>
+                                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Tempora veniam reiciendis assumenda a </p>
+                            </div>
+                        </div>
+                        <hr style="width: 90%; text-align: center; margin: 10px auto 20px;">
+                        <div class="cmnt">
+                            <div class="person">
+                                <img src="" alt="" width="50px" height="50px" style="border-radius: 50%; border: .5px solid black;">
+                                <p class="nom">name</p>
+                                <p class="wilaya">wilaya</p>
+                                <div class="eval">
+                                    <img src="../images/mode_comment_black_24dp.svg" alt="" width="20px" height= "20px">
+                                    <span class="number">n</span> Avis
+                                </div>
+                            </div>
+                            <div class="comntContent">
+                                    <div class="midl">
+                                            <div class="evaluation" style="display: inline;">
+                                                    <img src="../images/star_border_black_24dp.svg" alt="">
+                                                    <img src="../images/star_border_black_24dp.svg" alt="">
+                                                    <img src="../images/star_border_black_24dp.svg" alt="">
+                                                    <img src="../images/star_border_black_24dp.svg" alt="">
+                                                    <img src="../images/star_border_black_24dp.svg" alt="">
+                                                </div> 
+                                                <p class="date">publié il y a N jours</p>
+                                    </div>
+                                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Tempora veniam reiciendis assumenda a </p>
+                            </div>
+                        </div>
+                        <hr style="width: 90%; text-align: center; margin: 10px auto 20px;">
+                        <div class="cmnt">
+                            <div class="person">
+                                <img src="" alt="" width="50px" height="50px" style="border-radius: 50%; border: .5px solid black;">
+                                <p class="nom">name</p>
+                                <p class="wilaya">wilaya</p>
+                                <div class="eval">
+                                    <img src="../images/mode_comment_black_24dp.svg" alt="" width="20px" height= "20px">
+                                    <span class="number">n</span> Avis
+                                </div>
+                            </div>
+                            <div class="comntContent">
+                                    <div class="midl">
+                                            <div class="evaluation" style="display: inline;">
+                                                    <img src="../images/star_border_black_24dp.svg" alt="">
+                                                    <img src="../images/star_border_black_24dp.svg" alt="">
+                                                    <img src="../images/star_border_black_24dp.svg" alt="">
+                                                    <img src="../images/star_border_black_24dp.svg" alt="">
+                                                    <img src="../images/star_border_black_24dp.svg" alt="">
+                                                </div> 
+                                                <p class="date">publié il y a N jours</p>
+                                    </div>
+                                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Tempora veniam reiciendis assumenda a </p>
+                            </div>
+                        </div>
+                        <hr style="width: 90%; text-align: center; margin: 10px auto 20px;">
+                        <div class="cmnt">
+                            <div class="person">
+                                <img src="" alt="" width="50px" height="50px" style="border-radius: 50%; border: .5px solid black;">
+                                <p class="nom">name</p>
+                                <p class="wilaya">wilaya</p>
+                                <div class="eval">
+                                    <img src="../images/mode_comment_black_24dp.svg" alt="" width="20px" height= "20px">
+                                    <span class="number">n</span> Avis
+                                </div>
+                            </div>
+                            <div class="comntContent">
+                                    <div class="midl">
+                                            <div class="evaluation" style="display: inline;">
+                                                    <img src="../images/star_border_black_24dp.svg" alt="">
+                                                    <img src="../images/star_border_black_24dp.svg" alt="">
+                                                    <img src="../images/star_border_black_24dp.svg" alt="">
+                                                    <img src="../images/star_border_black_24dp.svg" alt="">
+                                                    <img src="../images/star_border_black_24dp.svg" alt="">
+                                                </div> 
+                                                <p class="date">publié il y a N jours</p>
+                                    </div>
+                                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Tempora veniam reiciendis assumenda a </p>
+                            </div>
+                        </div>
+                        <div class="content"><a href="tousComment.html">Voir tous les commentaires</a></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- end landing  -->
+
+        <!-- start footer  -->
+        <footer>
+                <div class="container">
+                    <div>
+                        <h4>Restaurateur</h4>
+                        <ul>
+                            <li><a href="Inscription.html">Inscrire un Restaurant</a></li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h4>Contact</h4>
+                        <ul>
+                            <li></li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h4>Explore</h4>
+                        <ul>
+                                <li><a href="../index.html">Accueil</a></li>
+                                <li><a href="TopRestaurants.html">Top Restaurants</a></li>
+                                <li><a href="topDestination.html">Top Destinations</a></li>
+                                <li><a href="Nouveau.html">Nouveau</a></li>
+                                <li><a href="map.html">Map</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <span>© 2022 • Tous droits réservés •</span> 
+            </footer>
+    
+        <!-- End footer  -->
+
+    <script src="../javaScript/../javaScript/restaurantDetails.js"></script>
+</body>
+</html>
